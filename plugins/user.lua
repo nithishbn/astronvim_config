@@ -20,4 +20,12 @@ return {
     opts = {},
     event = "User AstroFile",
   },
+  { "nvim-tree/nvim-web-devicons", lazy = true },
+  -- install without yarn or npm
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
 }
